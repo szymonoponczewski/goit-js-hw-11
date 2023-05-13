@@ -2,47 +2,78 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #212121;
-  line-height: 1.5;
-  background: linear-gradient(90deg, #fafafa 21px, transparent 1%) center,
-    linear-gradient(#fafafa 21px, transparent 1%) center, #666;
-  background-size: 22px 22px;
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
 
-img {
-  margin-right: 10px;
-}
-
-#search-box {
-  font: inherit;
-  padding: 8px;
-  max-width: 320px;
-  margin-bottom: 16px;
-}
-
-.country-list,
-.country-info {
-  list-style: none;
-}
-
-.country-info {
-  padding-left: 40px;
-}
-
-.country-list {
+.photo-card {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
+  max-width: 365px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
-.country-list li {
+.photo-card img {
+  width: 365px;
+  height: 240px;
+  object-fit: cover;
+}
+
+.photo-card:hover {
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.14),
+    0px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+.info {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 12px;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.info-item {
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  background-color: #6b63af;
+  padding: 8px 0;
+}
+
+input {
+  padding: 7px;
+  width: 500px;
+  margin-right: 5px;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.gallery-button {
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.load-more {
+  margin: 15px 0;
+  padding: 10px 18px;
+  background-color: #6b63af;
+  border-radius: 5%;
+  border: none;
+  color: white;
+}
+
+.load-more:hover {
+  box-shadow: 0 1px 5px darkslategray;
+  transition: all 0.1s ease;
 }
