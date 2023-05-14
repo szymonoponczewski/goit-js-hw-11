@@ -18,7 +18,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
+  gap: 15px;
+  margin-top: 15px;
 }
 
 .photo-card {
